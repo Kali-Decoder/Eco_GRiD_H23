@@ -30,7 +30,7 @@ A month-long celebration from October 1st - 31st sponsored by [Digital Ocean](ht
 
 ## How to contribute to this project
 Here are 3 quick ways to contribute to this project:
-* Star the Project.
+* Star the Project.https://github.com/Kali-Decoder/Eco_GRiD_H23
 * Connect with Project Admin on Linkedin : [https://www.linkedin.com/in/neeraj-choubisa-a4952b202/](https://www.linkedin.com/in/neeraj-choubisa-a4952b202/)
 * Add your name to the `CONTRIBUTORS.md` file.
   
@@ -41,13 +41,13 @@ Make a pull request and wait for it to be merged!
 * Clone your fork down to your local machine
 
 ```markdown
-git clone https://github.com/your-username/hacktoberfest.git
+git clone https://github.com/your-username/Eco_GRiD_H23.git
 ```
 
 * Create a branch
 
 ```markdown
-git checkout -b branch-name
+git checkout -b branch-name\feature
 ```
 
 * Make your changes (choose from any task below)
@@ -56,7 +56,7 @@ git checkout -b branch-name
 ```markdown
 git add .
 git commit -m 'Commit message'
-git push origin branch-name
+git push origin branch-name\feature
 ```
 
 * Create a new pull request from your forked repository (Click the `New Pull Request` button located at the top of your repo)
@@ -77,9 +77,6 @@ Add your name to the `CONTRIBUTORS.md` file using the below convention:
 ```
 
 
-
-
-### Connect with Project Admin on Linkedin : [Linkedin](https://www.linkedin.com/in/neeraj-choubisa-a4952b202/)
 
 
 
