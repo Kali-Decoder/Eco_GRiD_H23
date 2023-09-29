@@ -1,6 +1,8 @@
 # Eco-GRiD
 ## About The Project
 Energy Trading marketplace between P2P and P2G or G2P.P2P is between  one nation’s  grid to another nation’s  grid.  P2G or G2P is between prosumers to grid and vice versa.
+<br>
+This project encompasses Machine Learning, Web Development, and Web3 components, aligning well with your expertise. Please consider suggesting additional features or ideas. If you have any questions or require clarification on how the project is executed, please don't hesitate to reach out via GitHub issues or on LinkedIn. Your feedback is highly valued.
 ## The features of our product are 
 - (✓) Cross-Border P2P Trading: Facilitates renewable energy exchange between different nations' grids.
 - (✓) P2G and G2P Transactions: Enables prosumers to sell excess energy to the grid and vice versa.
