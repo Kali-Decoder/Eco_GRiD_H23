@@ -1,3 +1,20 @@
+# Eco-GRiD
+## About The Project
+Energy Trading marketplace between P2P and P2G or G2P.P2P is between  one nation’s  grid to another nation’s  grid.  P2G or G2P is between prosumers to grid and vice versa.
+## The features of our product are 
+- (✓) Cross-Border P2P Trading: Facilitates renewable energy exchange between different nations' grids.
+- (✓) P2G and G2P Transactions: Enables prosumers to sell excess energy to the grid and vice versa.
+- (✓) Blockchain Trust: Utilizes blockchain for secure, transparent, and immutable transaction records.
+- (✓) Prosumer Empowerment: Empowers prosumers to actively engage in the energy market.
+- (✓) Real-time Monitoring: Monitors energy transactions and grid performance in real-time.
+- (✓) User can redeem their tokens anytime / Burn Tokens Implementation and Automated Settlements: Automates payment settlements for energy transactions.
+
+## Team Members
+- Neeraj Choubisa (Team Lead)
+- Sneha Gupta
+- Chirag Mittal
+- Rakesh Roshan
+- Yash Dua
 
 
 **THIS REPO IS READY FOR HacktoberFest-23 You can start contributing !!!**
