@@ -1,11 +1,15 @@
 # Eco-GRiD
 <img src="https://ziadoua.github.io/m3-Markdown-Badges/badges/Hacktoberfest2023/hacktoberfest20232.svg">
+
 ## About The Project
 Energy Trading marketplace between P2P and P2G or G2P.P2P is between  one nation’s  grid to another nation’s  grid.  P2G or G2P is between prosumers to grid and vice versa.
 <br/>
 <br/>
 This project encompasses Machine Learning, Web Development, and Web3 components, aligning well with your expertise. Please consider suggesting additional features or ideas. If you have any questions or require clarification on how the project is executed, please don't hesitate to reach out via GitHub issues or on LinkedIn. Your feedback is highly valued.
+<br/>
+<br/>
 ## The features of our product are 
+
 - (✓) Cross-Border P2P Trading: Facilitates renewable energy exchange between different nations' grids.
 - (✓) P2G and G2P Transactions: Enables prosumers to sell excess energy to the grid and vice versa.
 - (✓) Blockchain Trust: Utilizes blockchain for secure, transparent, and immutable transaction records.
@@ -21,6 +25,7 @@ This project encompasses Machine Learning, Web Development, and Web3 components,
 - Yash Dua
 
 <img src="https://ziadoua.github.io/m3-Markdown-Badges/badges/Hacktoberfest2023/hacktoberfest20231.svg"> 
+
 **THIS REPO IS READY FOR HacktoberFest-23 You can start contributing !!!**
 
 Use this project to make your first contribution to an open source project on GitHub. Practice making your first pull request to a public repository before doing the real thing!
@@ -41,6 +46,7 @@ Here are 3 quick ways to contribute to this project:
 Make a pull request and wait for it to be merged!
 <br/><br/>
 <img src="https://ziadoua.github.io/m3-Markdown-Badges/badges/Hacktoberfest2023/hacktoberfest20233.svg">
+
 ## Getting started
 * Fork this repository (Click the Fork button in the top right of this page, click your Profile Image)
 * Clone your fork down to your local machine
