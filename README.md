@@ -59,7 +59,7 @@ Add your name to the `CONTRIBUTORS.md` file using the below convention:
 
 
 
-### Connect with Project Admin on Linkedin : [https://linkedin.com/in/imtiyaz-sde/](https://linkedin.com/in/imtiyaz-sde/)
+### Connect with Project Admin on Linkedin : [Linkedin](https://www.linkedin.com/in/neeraj-choubisa-a4952b202/)
 
 
 
