@@ -6,6 +6,15 @@
 - Year : 4th
 - College: IIT Roorkee
 
+
+#### Name: [Nancy Yadav](https://github.com/Nancy-30/)
+
+- Place: Ajmer,Rajasthan,India
+- Designation: Full Stack Developer
+- GitHub: [Nancy-30](https://github.com/Nancy-30/)
+- Year : 3rd
+- College: IIIT Dharwad
+
 <
 - Place: Kanpur,Uttar Pradesh,India
 - Designation: Full Stack Web Developer
@@ -32,4 +41,5 @@
 - GitHub: [ashishlal2003](https://github.com/ashishlal2003/)
 - Year : 3rd
 - College: IIIT Dharwad
+
 
