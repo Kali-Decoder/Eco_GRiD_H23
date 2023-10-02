@@ -6,7 +6,7 @@
 - Year : 4th
 - College: IIT Roorkee
 
-#### Name: [Divya Tiwari]()
+#### Name: [Divya Tiwari](https://github.com/itsdivya1309)
 
 - Place: Varanasi, Uttar Pradesh, India
 - Designation: ML engineer
