@@ -6,6 +6,13 @@
 - Year : 4th
 - College: IIT Roorkee
 
+<
+- Place: Kanpur,Uttar Pradesh,India
+- Designation: Full Stack Web Developer
+- GitHub: [KshitizSachan](https://github.com/KshitizSachan/)
+- Year : 3rd
+- College: IIIT Dharwad
+
 
   #### Name: [Raj Bhatt](https://github.com/mrbhatt2348/)
 
