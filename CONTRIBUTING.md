@@ -1,10 +1,11 @@
-#### Name: [Neeraj Choubisa](https://github.com/Kali-Decoder/)
+#### Name: [Nicolas Alvarez](https://nicolas-alvarez.netlify.app/)
 
-- Place: Udaipur,Rajasthan,India
+- Place: Cordoba,Cordoba,Argentina
 - Designation: Full Stack Developer
-- GitHub: [Kali-Decoder](https://github.com/Kali-Decoder/)
-- Year : 4th
-- College: IIT Roorkee
+
+- GitHub: [Nicol4sDev](https://github.com/Nicol4sDev)
+- Self-thaught / autodidact
+
 
 
 #### Name: [Avneet Singh Sidhu](https://github.com/Sidhuavneet)
@@ -58,6 +59,5 @@
 - GitHub: [ashishlal2003](https://github.com/ashishlal2003/)
 - Year : 3rd
 - College: IIIT Dharwad
-
 
 
