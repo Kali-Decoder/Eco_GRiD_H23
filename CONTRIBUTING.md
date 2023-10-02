@@ -10,5 +10,6 @@
 
 - Place: Varanasi, Uttar Pradesh, India
 - Designation: ML engineer
+- GitHub: [itsdivya1309](https://github.com/itsdivya1309)
 - Year: 3rd
 - College: IIT (BHU) Varanasi
