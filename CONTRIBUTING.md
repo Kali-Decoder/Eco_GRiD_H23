@@ -1,8 +1,26 @@
-#### Name: [Neeraj Choubisa](https://github.com/Kali-Decoder/)
+#### Name: [Nicolas Alvarez](https://nicolas-alvarez.netlify.app/)
 
-- Place: Udaipur,Rajasthan,India
+- Place: Cordoba,Cordoba,Argentina
 - Designation: Full Stack Developer
-- GitHub: [Kali-Decoder](https://github.com/Kali-Decoder/)
+
+- GitHub: [Nicol4sDev](https://github.com/Nicol4sDev)
+- Self-thaught / autodidact
+
+
+
+#### Name: [Avneet Singh Sidhu](https://github.com/Sidhuavneet)
+
+- Place: Bathinda, Punjab, India
+- Designation: Full Stack Web Developer, Blockchain Developer
+- GitHub: [Sidhuavneet](https://github.com/Sidhuavneet)
+- Year : 3rd
+- College: NIT Jalandahr
+
+#### Name: [Nikhil Dabhade](https://github.com/nikhil12377/)
+
+- Place: Nashik, Maharashtra,India
+- Designation: Full Stack Developer
+- GitHub: [nikhil12377](https://github.com/nikhil12377/)
 - Year : 4th
 - College: IIT Roorkee
 
@@ -13,3 +31,42 @@
 - GitHub: [itsdivya1309](https://github.com/itsdivya1309)
 - Year: 3rd
 - College: IIT (BHU) Varanasi
+
+
+#### Name: [Nancy Yadav](https://github.com/Nancy-30/)
+
+- Place: Ajmer,Rajasthan,India
+- Designation: Full Stack Developer
+- GitHub: [Nancy-30](https://github.com/Nancy-30/)
+- Year : 3rd
+- College: IIIT Dharwad
+
+#### Name: [KshitizSachan](https://github.com/KshitizSachan/)
+- Place: Kanpur,Uttar Pradesh,India
+- Designation: Full Stack Web Developer
+- GitHub: [KshitizSachan](https://github.com/KshitizSachan/)
+- Year : 3rd
+- College: IIIT Dharwad
+
+
+  #### Name: [Raj Bhatt](https://github.com/mrbhatt2348/)
+
+- Place: Rajkot, Gujarat, India
+- Designation: Front End Developer
+- GitHub: [mrbhatt2348](https://github.com/Kali-mrbhatt2348/)
+- Year : 3rd
+- College: Government Engineering College Rajkot
+
+
+
+
+#### Name: [Ashish Lal](https://github.com/ashishlal2003/)
+
+- Place: Bangalore,Karnataka,India
+- Designation: AI/ML Developer
+- GitHub: [ashishlal2003](https://github.com/ashishlal2003/)
+- Year : 3rd
+- College: IIIT Dharwad
+
+
+
