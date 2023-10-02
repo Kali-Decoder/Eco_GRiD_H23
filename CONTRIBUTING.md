@@ -6,6 +6,14 @@
 - Year : 4th
 - College: IIT Roorkee
 
+#### Name: [Nikhil Dabhade](https://github.com/nikhil12377/)
+
+- Place: Nashik, Maharashtra,India
+- Designation: Full Stack Developer
+- GitHub: [nikhil12377](https://github.com/nikhil12377/)
+- Year : 4th
+- College: LoGMIEER
+
 
 #### Name: [Nancy Yadav](https://github.com/Nancy-30/)
 
@@ -41,5 +49,6 @@
 - GitHub: [ashishlal2003](https://github.com/ashishlal2003/)
 - Year : 3rd
 - College: IIIT Dharwad
+
 
 
