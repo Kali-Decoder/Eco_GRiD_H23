@@ -22,7 +22,15 @@
 - Designation: Full Stack Developer
 - GitHub: [nikhil12377](https://github.com/nikhil12377/)
 - Year : 4th
-- College: LoGMIEER
+- College: IIT Roorkee
+
+#### Name: [Divya Tiwari](https://github.com/itsdivya1309)
+
+- Place: Varanasi, Uttar Pradesh, India
+- Designation: ML engineer
+- GitHub: [itsdivya1309](https://github.com/itsdivya1309)
+- Year: 3rd
+- College: IIT (BHU) Varanasi
 
 
 #### Name: [Nancy Yadav](https://github.com/Nancy-30/)
@@ -33,7 +41,7 @@
 - Year : 3rd
 - College: IIIT Dharwad
 
-<
+#### Name: [KshitizSachan](https://github.com/KshitizSachan/)
 - Place: Kanpur,Uttar Pradesh,India
 - Designation: Full Stack Web Developer
 - GitHub: [KshitizSachan](https://github.com/KshitizSachan/)
@@ -59,5 +67,6 @@
 - GitHub: [ashishlal2003](https://github.com/ashishlal2003/)
 - Year : 3rd
 - College: IIIT Dharwad
+
 
 
