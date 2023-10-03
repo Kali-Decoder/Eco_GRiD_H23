@@ -77,3 +77,10 @@
 - Year : 3rd
 - College: IIIT Dharwad
 
+#### Name: [Jalaj Bhatt](https://github.com/Jalaj028)
+
+- Place: Nainital,Uttarakhand,India
+- Designation: Fullstack (MERN) developer
+- GitHub: [Jalaj028](https://github.com/Jalaj028)
+- Year : 2nd
+- College: BIAS Bhimtal
