@@ -69,4 +69,11 @@
 - College: IIIT Dharwad
 
 
+#### Name: [Manindhra Goud](https://github.com/manindhra1412/)
+
+- Place: Hyderabad,Telangana,India
+- Designation: Full Stack Developer
+- GitHub: [manindhra1412](https://github.com/manindhra1412/)
+- Year : 3rd
+- College: IIIT Dharwad
 
