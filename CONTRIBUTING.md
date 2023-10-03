@@ -58,7 +58,7 @@
 - College: IIIT Dharwad
 
 
-  #### Name: [Raj Bhatt](https://github.com/mrbhatt2348/)
+#### Name: [Raj Bhatt](https://github.com/mrbhatt2348/)
 
 - Place: Rajkot, Gujarat, India
 - Designation: Front End Developer
