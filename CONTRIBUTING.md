@@ -96,7 +96,7 @@
 
 #### Name: [Jatin Gupta](https://github.com/Jatingupta9120/)
 
-- Place: Uttar Pradesh,Ghaziabad,India
+- Place: UttarPradesh,Ghaziabad,India
 - Designation: Full Stack Developer
 - GitHub: [Jatingupta9120](https://github.com/Jatingupta9120)
 - Year : 4th
