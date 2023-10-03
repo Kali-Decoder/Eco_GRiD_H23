@@ -1,3 +1,12 @@
+
+#### Name: [Rakesh Roushan](https://github.com/Roshan23R)
+
+- Place: Dharwad, India
+- Designation: Full Stack Web Developer, ML Developer
+- GitHub: [Roshan23R](https://github.com/Roshan23R)
+- Year: 4th
+- College: IIIT Dharwad
+
 #### Name: [Nicolas Alvarez](https://nicolas-alvarez.netlify.app/)
 
 - Place: Cordoba,Cordoba,Argentina
