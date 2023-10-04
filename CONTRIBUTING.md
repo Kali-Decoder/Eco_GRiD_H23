@@ -93,3 +93,12 @@
 - GitHub: [Jalaj028](https://github.com/Jalaj028)
 - Year : 2nd
 - College: BIAS Bhimtal
+
+#### Name: [Jatin Gupta](https://github.com/Jatingupta9120/)
+
+- Place: UttarPradesh,Ghaziabad,India
+- Designation: Full Stack Developer
+- GitHub: [Jatingupta9120](https://github.com/Jatingupta9120)
+- Year : 4th
+- College: ABES Engineering College
+
