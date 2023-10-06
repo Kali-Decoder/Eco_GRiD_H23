@@ -15,8 +15,6 @@
 - GitHub: [Nicol4sDev](https://github.com/Nicol4sDev)
 - Self-thaught / autodidact
 
-
-
 #### Name: [Avneet Singh Sidhu](https://github.com/Sidhuavneet)
 
 - Place: Bathinda, Punjab, India
@@ -41,7 +39,6 @@
 - Year: 3rd
 - College: IIT (BHU) Varanasi
 
-
 #### Name: [Nancy Yadav](https://github.com/Nancy-30/)
 
 - Place: Ajmer,Rajasthan,India
@@ -57,7 +54,6 @@
 - Year : 3rd
 - College: IIIT Dharwad
 
-
 #### Name: [Raj Bhatt](https://github.com/mrbhatt2348/)
 
 - Place: Rajkot, Gujarat, India
@@ -66,9 +62,6 @@
 - Year : 3rd
 - College: Government Engineering College Rajkot
 
-
-
-
 #### Name: [Ashish Lal](https://github.com/ashishlal2003/)
 
 - Place: Bangalore,Karnataka,India
@@ -76,7 +69,6 @@
 - GitHub: [ashishlal2003](https://github.com/ashishlal2003/)
 - Year : 3rd
 - College: IIIT Dharwad
-
 
 #### Name: [Manindhra Goud](https://github.com/manindhra1412/)
 
@@ -110,3 +102,10 @@
 - Year : 3th
 - College: IIIT Dharwad
 
+#### Name: [Meet Javiya](https://github.com/meet-javiya0)
+
+- Place: Rajkot, Gujarat, India
+- Designation: Android developer
+- GitHub: [Meet Javiya](https://github.com/meet-javiya0)
+- Year : 3rd
+- College: GEC Rajkot
