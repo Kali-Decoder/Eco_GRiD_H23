@@ -109,3 +109,11 @@
 - GitHub: [Meet Javiya](https://github.com/meet-javiya0)
 - Year : 3rd
 - College: GEC Rajkot
+  
+#### Name: [Aditya Datta](https://github.com/Aditya007Datta)
+
+- Place: Kalyani, West Bengal, India
+- Designation: Full Stack Developer
+- GitHub: [Aditya007Datta][(https://github.com/Aditya007Datta)]
+- Year : 3rd
+- College: HIT Kolkata
