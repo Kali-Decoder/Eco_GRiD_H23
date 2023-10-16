@@ -41,15 +41,20 @@ contract EnergyTrading {
     }
 
     function settleTrade(uint256 tradeId) public {
-        require(tradeId < trades.length, "Invalid trade ID");
-        Trade storage trade = trades[tradeId];
-        require(!trade.settled, "Trade already settled");
+      require(tradeId < trades.length, "Invalid trade ID");
+    Trade storage trade = trades[tradeId];
+    require(!trade.settled, "Trade already settled");
+    
+    uint256 totalCost = trade.energyAmount * trade.price;
+    require(msg.value == totalCost, "Payment must equal totalCost");
 
-        uint256 totalCost = trade.energyAmount * trade.price;
-        require(energyToken.transferFrom(trade.buyer, trade.seller, trade.energyAmount), "Energy transfer failed");
-        require(energyToken.transferFrom(trade.seller, trade.buyer, totalCost), "Payment transfer failed");
+    // Transfer the energy tokens
+    require(energyToken.transferFrom(trade.buyer, trade.seller, trade.energyAmount), "Energy transfer failed");
 
-        trade.settled = true;
-        emit TradeSettled(tradeId);
+    // Transfer the payment to the seller
+    payable(trade.seller).transfer(totalCost);
+
+    trade.settled = true;
+    emit TradeSettled(tradeId);
     }
 }
