@@ -1,0 +1,154 @@
+{
+  "powerstations": [
+    {
+      "id": "1",
+      "name": "Power Station 1",
+      "description": "Panipat Thermal Power Station I is located at Khukhrana Panipat in Haryana. The power plant is one of the coal based power plants of HPGCL",
+      "total_Substations": 10,
+      "connection_types": ["14 kV AC", "13 kV AC"],
+      "walletAddress": "0xabcdef1234",
+      "img_url": "https://img.freepik.com/premium-vector/landscape-field-with-solar-panels-sustainable-renewable-green-energy-concept-scenery-with-ecofriendly-electricity-resources-power-plan-factory_142963-1360.jpg?w=2000",
+      "location": {
+        "lat": "12.4",
+        "lot": "13"
+      },
+      "capacity": 12000,
+      "efficiency":3.5
+    },
+    {
+      "id": "2",
+      "name": "Solar Power Station A",
+      "description": "Solar Power Station A is located in a sunny region in California. It harnesses the power of the sun to generate electricity, providing clean and sustainable energy to the region.",
+      "total_Substations": 5,
+      "connection_types": ["11 kV AC", "33 kV AC", "66 kV AC"],
+      "walletAddress": "0x1234567890",
+      "img_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC8VZkpPiOrnkUHn9U0f9jKfNmFCOuG3zEEaHeXdYSdfjCOdeQfpnnR-kwNbiczaiNtNQ&usqp=CAU",
+      "location": {
+        "lat": "34.05",
+        "lot": "-118.24"
+      },
+      "capacity": 8000,
+      "efficiency":4.5
+    },
+    {
+      "id": "3",
+      "name": "Wind Energy Farm B",
+      "description": "Wind Energy Farm B is situated on the windy plains of Texas. It features a collection of wind turbines that generate electricity from the power of the wind, contributing to a greener future.",
+      "total_Substations": 6,
+      "connection_types": ["6 kV AC", "15 kV AC", "30 kV AC"],
+      "walletAddress": "0x2345678901",
+      "img_url": "https://previews.123rf.com/images/stockgiu/stockgiu1811/stockgiu181104569/112161639-ecological-green-solar-panel-with-tree-and-sun-cartoon-vector-illustration-graphic-design.jpg@",
+      "location": {
+        "lat": "32.78",
+        "lot": "-99.92"
+      },
+      "capacity": 6000,
+      "efficiency":2.5
+    },
+    {
+      "id": "4",
+      "name": "Hydroelectric Power Station C",
+      "description": "Hydroelectric Power Station C is nestled in the mountains of British Columbia, Canada. It harnesses the power of flowing water to generate clean and sustainable electricity.",
+      "total_Substations": 4,
+      "connection_types": ["13 kV AC", "33 kV AC", "220 kV AC"],
+      "walletAddress": "0x3456789012",
+      "img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/ThreeGorgesDam-China2009.jpg/450px-ThreeGorgesDam-China2009.jpg",
+      "location": {
+        "lat": "53.73",
+        "lot": "-122.64"
+      },
+      "capacity": 9500,
+      "efficiency":3.0
+    },
+    {
+      "id": "5",
+      "name": "Geothermal Power Plant D",
+      "description": "Geothermal Power Plant D is located in the geologically active region of Iceland. It taps into the Earth's natural heat to produce environmentally friendly electricity.",
+      "total_Substations": 3,
+      "connection_types": ["10 kV AC", "20 kV AC"],
+      "walletAddress": "0x4567890123",
+      "img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/NesjavellirPowerPlant_edit2.jpg/435px-NesjavellirPowerPlant_edit2.jpg",
+      "location": {
+        "lat": "64.14",
+        "lot": "-21.94"
+      },
+      "capacity": 7200,
+      "efficiency":4.35
+    }
+  ,
+    {
+        "id": "6",
+        "name": "Solar Power Station B",
+        "description": "Solar Power Station B is situated in the sunny deserts of Arizona, USA. It harnesses solar energy to generate clean electricity for the region.",
+        "total_Substations": 5,
+        "connection_types": ["132 kV AC", "220 kV AC", "400 kV AC"],
+        "walletAddress": "0x5678901234",
+        "img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Foto_a%C3%A9re_de_solnovas_y_torre_junio_2010.jpg/1920px-Foto_a%C3%A9re_de_solnovas_y_torre_junio_2010.jpg",
+        "location": {
+            "lat": "33.43",
+            "lot": "-111.71"
+        },
+        "capacity": 8500,
+        "efficiency": 4.68
+    },
+    {
+        "id": "7",
+        "name": "Wind Energy Farm C",
+        "description": "Wind Energy Farm C is located on the windy plains of Kansas, USA. It utilizes wind turbines to generate green and sustainable electricity.",
+        "total_Substations": 6,
+        "connection_types": ["7 kV AC", "14 kV AC"],
+        "walletAddress": "0x6789012345",
+        "img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Wind_turbines_in_southern_California_2016.jpg/1200px-Wind_turbines_in_southern_California_2016.jpg",
+        "location": {
+            "lat": "38.42",
+            "lot": "-99.37"
+        },
+        "capacity": 6100,
+        "efficiency": 4.12
+    },
+    {
+        "id": "8",
+        "name": "Hydroelectric Power Station E",
+        "description": "Hydroelectric Power Station E is nestled in the mountains of Switzerland. It harnesses the power of mountain streams to produce clean and sustainable electricity.",
+        "total_Substations": 4,
+        "connection_types": ["11kV AC", "32 kV AC"],
+        "walletAddress": "0x7890123456",
+        "img_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj7Vcj3Mso973nskS5Xb-KoLpZ7QhRgOF9cA&usqp=CAU",
+        "location": {
+            "lat": "46.67",
+            "lot": "7.84"
+        },
+        "capacity": 9800,
+        "efficiency": 4.92
+    },
+    {
+        "id": "9",
+        "name": "Biomass Power Plant F",
+        "description": "Biomass Power Plant F is located in the heart of Iowa, USA. It converts organic waste into bioenergy, contributing to a sustainable energy future.",
+        "total_Substations": 3,
+        "connection_types": ["9 kV AC", "18 kV AC"],
+        "walletAddress": "0x8901234567",
+        "img_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDyy3SU_2tBnbjdEGCKk5yzy3YLGK30A_79g&usqp=CAU",
+        "location": {
+            "lat": "42.03",
+            "lot": "-93.63"
+        },
+        "capacity": 5200,
+        "efficiency": 3.75
+    },
+    {
+        "id": "10",
+        "name": "Tidal Power Station G",
+        "description": "Tidal Power Station G is situated on the coast of Nova Scotia, Canada. It harnesses the energy of ocean tides to generate sustainable electricity.",
+        "total_Substations": 2,
+        "connection_types": ["11 kV AC", "22 kV AC"],
+        "walletAddress": "0x9012345678",
+        "img_url": "https://blogmech.com/wp-content/uploads/2019/07/2e982-01-underwater-tidal-power-plant-array-renewable-energy-projects-renewable-energy-source.jpg",
+        "location": {
+            "lat": "44.55",
+            "lot": "-62.65"
+        },
+        "capacity": 3700,
+        "efficiency": 3.28
+    }]
+}
