@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap");
+
+    .expand {
+      background: transparent;
+      animation: moveCursor2 0.5s forwards;
+      border: 1px solid #000;
+    }
+
+    @keyframes moveCursor1 {
+      from {
+        transform: scale(1);
+      }
+
+      to {
+        transform: scale(0.8);
+      }
+    }
+
+    @keyframes moveCursor2 {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(2);
+      }
+
+      100% {
+        transform: scale(1);
+        opacity: 0;
+      }
+    }
+
+    .loader-container {
+      background-color: white;
+      height: 100vh;
+      width: 100vw;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 50;
+      opacity: 1;
+      transition: all 500ms;
+    }
+
+    .loader {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50vh;
+    }
+
+    .rotatingLoader {
+      width: 5em;
+      height: 5em;
+      border-radius: 50%;
+      border-top: 4px dashed yellow;
+      animation: round 700ms linear infinite;
+    }
+
+    @keyframes round {
+      from {
+        rotate: 0deg;
+      }
+
+      to {
+        rotate: 360deg;
+      }
+    }
+  </style>
+
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+  <title>Eco-GRiD</title>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <div class="cursor"></div>
+  <div class="loader-container bg-black" id="loader-container">
+    <div class="loader">
+      <div class="rotatingLoader"></div>
+    </div>
+  </div>
+
+</body>
+<script>
+  var loader = document.getElementById("loader-container");
+  window.addEventListener("load", function () {
+    setTimeout(function () {
+      loader.style.opacity = "0";
+    }, 600);
+    setTimeout(function () {
+      loader.style.display = "none";
+    }, 900);
+  });
+  const cursor = document.querySelector(".cursor");
+
+  document.addEventListener("mousemove", (e) => {
+    cursor.setAttribute(
+      "style",
+      "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;"
+    );
+  });
+
+  document.addEventListener("click", (e) => {
+    cursor.classList.add("expand");
+    setTimeout(() => {
+      cursor.classList.remove("expand");
+    }, 500);
+  });
+
+  //type anything here
+</script>
+
+</html>
