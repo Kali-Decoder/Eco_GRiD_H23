@@ -40,21 +40,26 @@ contract EnergyTrading {
         emit TradeInitiated(msg.sender, seller, energyAmount, price);
     }
 
-    function settleTrade(uint256 tradeId) public {
-      require(tradeId < trades.length, "Invalid trade ID");
+   function settleTrade(uint256 tradeId) public payable {
+    require(tradeId < trades.length, "Invalid trade ID");
     Trade storage trade = trades[tradeId];
     require(!trade.settled, "Trade already settled");
     
     uint256 totalCost = trade.energyAmount * trade.price;
     require(msg.value == totalCost, "Payment must equal totalCost");
 
+    // Check contract balance before transferring Ether
+    require(address(this).balance >= totalCost, "Contract balance is insufficient");
+
     // Transfer the energy tokens
     require(energyToken.transferFrom(trade.buyer, trade.seller, trade.energyAmount), "Energy transfer failed");
 
     // Transfer the payment to the seller
-    payable(trade.seller).transfer(totalCost);
+    (bool paymentSuccess, ) = payable(trade.seller).call{value: totalCost}("");
+    require(paymentSuccess, "Payment to the seller failed");
 
     trade.settled = true;
     emit TradeSettled(tradeId);
-    }
+}
+
 }
