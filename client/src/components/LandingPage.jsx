@@ -28,8 +28,10 @@ const LandingPage = () => {
     setMenuOpen(!menuOpen);
   };
 
-  const isMobile = useMediaQuery({ maxWidth: 767 }); // Define the mobile breakpoint
+  const isMobile = useMediaQuery({ maxWidth: 700 }); // Define the mobile breakpoint
   const isLaptop = useMediaQuery({ minWidth: 780 });
+  const isTablet = useMediaQuery({ maxWidth: 900 });
+
 
   const navigate = useNavigate();
 
@@ -58,7 +60,7 @@ const LandingPage = () => {
 
   return (
     <>
-      {isLaptop && (
+      {!isTablet && (
         <section className="w-full px-8 text-gray-700 bg-black overflow-x-hidden">
           <div className=" flex flex-col flex-wrap items-center justify-between py-5 mx-auto md:flex-row max-w-6xl">
             <div className="relative flex flex-col md:flex-row">
@@ -109,7 +111,7 @@ const LandingPage = () => {
           </div>
         </section>
       )}
-      {isMobile && (
+      {isTablet && (
         <div className="bg-black p-4 flex justify-between items-center">
           <div className="flex items-center">
             <GiRollingEnergy size={40} color="white" />
@@ -157,7 +159,7 @@ const LandingPage = () => {
         </div>
       )}
 
-{isLaptop && (
+{!isMobile && (
 
 
       <section className="px-2 py-32 bg-black md:px-0 overflow-x-hidden ">
@@ -209,11 +211,14 @@ const LandingPage = () => {
                 </div>
               </div>
             </div>
-            <div className="w-full md:w-1/3 flex flex-end">
+            {!isTablet && (
+              <div className="w-full md:w-1/3 flex flex-end">
               <div className="w-full  h-auto overflow-hidden rounded-sm">
                 <FaSuperpowers color="#00C5CD" size={400} />
               </div>
             </div>
+            ) }
+            
           </div>
         </div>
       </section>
@@ -288,8 +293,8 @@ const LandingPage = () => {
           </div>
 
 
-          {isLaptop && (
-            <div className="box-border order-first w-full text-black border-solid md:w-1/2 md:pl-10 md:order-none mt-8">
+          {!isMobile && (
+            <div className="ml-5 mr-5 box-border order-first w-full text-black border-solid  mt-8">
               <h2 className="m-0 text-xl font-semibold leading-tight border-0 border-gray-300 lg:text-3xl md:text-2xl">
                 Boost Productivity
               </h2>
@@ -383,6 +388,9 @@ const LandingPage = () => {
           )}
         </div>
 
+        
+        
+        
         <div className="box-border mb-10 flex flex-col items-center content-center px-8 mx-auto mt-5 leading-6 text-black border-0 border-gray-300 border-solid md:mt-20 xl:mt-0 md:flex-row max-w-7xl">
           <div className="box-border w-full text-black border-solid md:w-1/2 md:pl-6 ">
             <h2 className="m-0 text-xl font-semibold leading-tight border-0 border-gray-300 lg:text-3xl md:text-2xl">
@@ -424,8 +432,8 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {isLaptop && (
-        <section className="py-20  bg-black container mx-auto">
+      {!isMobile && (
+        <section className="py-20 bg-black container mx-auto w-full ml-5 mr-5">
           <div className="container items-center max-w-6xl px-8 mx-5">
             <div className="flex flex-wrap items-center -mx-3">
               <div className="order-1 w-full px-3 lg:w-1/2 lg:order-0">
@@ -511,7 +519,7 @@ const LandingPage = () => {
       )}
 
       {isMobile && (
-        <section className="py-20  bg-black mr-5">
+        <section className="py-20 bg-black mr-5">
           <div className=" items-center ">
             <div className="flex flex-wrap items-center -mx-3">
               <div className="order-1 w-full px-3 lg:order-0">
@@ -605,9 +613,9 @@ const LandingPage = () => {
         </section>
       )}
 
-      {isLaptop && (
+      {!isTablet && (
         <div
-          className="section2 mx-auto bg-black flex justify-center items-center"
+          className="w-full ml-5 mr-5 section2 mx-auto bg-black flex justify-center items-center"
           id="usecases"
         >
           <div className="features flex flex-wrap">
@@ -663,8 +671,8 @@ const LandingPage = () => {
         </div>
       )}
 
-      {isMobile && (
-        <div className="items-center justify-center mr-5 mt-20 mb-4 lg:flex ml-5 ">
+      {isTablet && (
+        <div className=" items-center w-full ml-5 mr-5 justify-center mr-5 mt-20 mb-4 lg:flex">
 
           <div className="flex flex-col mb-10 items-start justify-start w-full h-auto mb-12 lg:w-1/3 lg:mb-0">
             <div className="flex items-center justify-center">
