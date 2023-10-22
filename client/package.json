@@ -28,10 +28,12 @@
     "react-dom": "^18.2.0",
     "react-elastic-carousel": "^0.11.5",
     "react-icons": "^4.11.0",
+    "react-responsive": "^9.0.2",
     "react-router-dom": "^6.16.0",
     "react-scripts": "5.0.1",
     "react-toastify": "^9.1.3",
     "react-type-animation": "^3.1.0",
+    "styled-components": "^6.1.0",
     "wagmi": "^1.3.3",
     "web-vitals": "^2.1.4"
   },
@@ -60,8 +62,10 @@
     ]
   },
   "devDependencies": {
+    "@typescript-eslint/parser": "^6.8.0",
     "autoprefixer": "^10.4.15",
     "postcss": "^8.4.29",
-    "tailwindcss": "^3.3.3"
+    "tailwindcss": "^3.3.3",
+    "typescript": "^5.2.2"
   }
 }

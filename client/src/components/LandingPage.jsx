@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { TypeAnimation } from "react-type-animation";
 import { FaSuperpowers } from "react-icons/fa";
 import { GiRollingEnergy } from "react-icons/gi";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
-import {FiSun} from "react-icons/fi";
-import {PiGitDiffLight} from "react-icons/pi";
-import {TbBusinessplan} from "react-icons/tb";
+import { FiSun } from "react-icons/fi";
+import { PiGitDiffLight } from "react-icons/pi";
+import { TbBusinessplan } from "react-icons/tb";
 import axios from "axios";
+import { useMediaQuery } from "react-responsive";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+
 const LandingPage = () => {
   // const [imageUrl,setImageUrl] = useState("");
   // useEffect(() => {
@@ -14,71 +18,156 @@ const LandingPage = () => {
   //     let res = await axios.get("http://localhost:8080/api/get-qrcode");
   //     const {message:{message,qr,qrimage,uniqueId}} = await res.data;
   //     console.log({message,qr,qrimage,uniqueId})
-      
+
   //   })()
   // },[]);
+
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  const isMobile = useMediaQuery({ maxWidth: 700 }); // Define the mobile breakpoint
+  const isLaptop = useMediaQuery({ minWidth: 780 });
+  const isTablet = useMediaQuery({ maxWidth: 900 });
+
+
+  const navigate = useNavigate();
+
+  const toHome = () => {
+    const element = document.getElementById("_");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+  const toFeatures = () => {
+    const element = document.getElementById("features");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+  const toUseCases = () => {
+    const element = document.getElementById("usecases");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const toRegister = () => {
+    navigate("/register");
+  };
+
   return (
     <>
-      <section className="w-full px-8 text-gray-700 bg-black overflow-x-hidden">
-        <div className=" flex flex-col flex-wrap items-center justify-between py-5 mx-auto md:flex-row max-w-6xl">
-          <div className="relative flex flex-col md:flex-row">
-            <a
-              href="/"
-              className="flex mt-4 flex-col items-center mb-5 font-bold text-gray-900 lg:w-auto lg:items-center lg:justify-center md:mb-0"
-            >
-              <GiRollingEnergy size={40} color="white" />
-              <span
-                className="mx-auto mt-1 text-white select-none"
-                style={{ fontSize: "25px" }}
+      {!isTablet && (
+        <section className="w-full px-8 text-gray-700 bg-black overflow-x-hidden">
+          <div className=" flex flex-col flex-wrap items-center justify-between py-5 mx-auto md:flex-row max-w-6xl">
+            <div className="relative flex flex-col md:flex-row">
+              <a
+                href="/"
+                className="flex mt-4 flex-col items-center mb-5 font-bold text-gray-900 lg:w-auto lg:items-center lg:justify-center md:mb-0"
               >
-                Eco
-                <span className="text-indigo-800">-</span>
-                <span className="text-indigo-600">GRiD</span>
-              </span>
-            </a>
-        
-        
-           
+                <GiRollingEnergy size={40} color="white" />
+                <span
+                  className="mx-auto mt-1 text-white select-none"
+                  style={{ fontSize: "25px" }}
+                >
+                  Eco
+                  <span className="text-indigo-800">-</span>
+                  <span className="text-indigo-600">GRiD</span>
+                </span>
+              </a>
+            </div>
+
+            <div className="inline-flex items-center ml-5 space-x-6 lg:justify-end">
+              <nav className="flex flex-wrap justify-center items-center mb-0 text-base  md:border-gray-200">
+                <a
+                  href="#_"
+                  className="mr-1 text-2xl font-medium leading-6 text-gray-600 hover:text-white"
+                >
+                  Home
+                </a>
+                <a
+                  href="#features"
+                  className="mr-1 text-2xl font-medium leading-6 text-gray-600 hover:text-white"
+                >
+                  Features
+                </a>
+                <a
+                  href="#usecases"
+                  className="mr-1 text-2xl font-medium leading-6 text-gray-600 hover:text-white"
+                >
+                  Use-Cases
+                </a>
+              </nav>
+              <a
+                href="/register"
+                className="inline-flex items-center justify-center px-4 py-2 text-base font-medium leading-6 text-white whitespace-no-wrap bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
+              >
+                Let's Go, See Future
+              </a>
+            </div>
+          </div>
+        </section>
+      )}
+      {isTablet && (
+        <div className="bg-black p-4 flex justify-between items-center">
+          <div className="flex items-center">
+            <GiRollingEnergy size={40} color="white" />
+            {/* <span className="text-white text-lg font-semibold"></span> */}
           </div>
 
-          <div className="inline-flex items-center ml-5 space-x-6 lg:justify-end">
-          <nav className="flex flex-wrap justify-center items-center mb-0 text-base  md:border-gray-200">
-              <a
-                href="#_"
-                className="mr-1 text-2xl font-medium leading-6 text-gray-600 hover:text-white"
-              >
-                Home
-              </a>
-              <a
-                href="#features"
-                className="mr-1 text-2xl font-medium leading-6 text-gray-600 hover:text-white"
-              >
-                Features
-              </a>
-              <a
-                href="#usecases"
-                className="mr-1 text-2xl font-medium leading-6 text-gray-600 hover:text-white"
-              >
-                Use-Cases
-              </a>
-              
-            </nav>
-            <a
-                   href="/register"
-              className="inline-flex items-center justify-center px-4 py-2 text-base font-medium leading-6 text-white whitespace-no-wrap bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
-            >
-              Let's Go, See Future
-            </a>
+          {/* Hamburger menu icon */}
+          {/* <MenuIcon
+          className="h-6 w-6 text-white cursor-pointer"
+          onClick={toggleMenu}
+        /> */}
+          <div onClick={toggleMenu} className=" lg:hidden">
+            {menuOpen ? (
+              <AiOutlineClose style={{ color: "white" }} size={20} />
+            ) : (
+              <AiOutlineMenu style={{ color: "white" }} size={20} />
+            )}
           </div>
+
+          {/* Mobile menu */}
+          {menuOpen && (
+            <div className="lg:hidden absolute top-16 right-4 bg-black p-2 rounded">
+              <div className="mb-4" onClick={toHome}>
+                <p className="text-2xl font-medium leading-6 text-gray-600">
+                  Home
+                </p>
+              </div>
+              <div className="mb-4" onClick={toFeatures}>
+                <p className="text-2xl font-medium leading-6 text-gray-600">
+                  Features
+                </p>
+              </div>
+              <div className="mb-4" onClick={toUseCases}>
+                <p className="text-2xl font-medium leading-6 text-gray-600">
+                  Use-Cases
+                </p>
+              </div>
+              <div className="mb-4" onClick={toRegister}>
+                <p className="text-2xl font-medium leading-6 text-gray-600">
+                  Let's Go, See Future
+                </p>
+              </div>
+            </div>
+          )}
         </div>
-      </section>
+      )}
 
-      <section className="px-2 py-32 bg-black md:px-0 overflow-x-hidden">
+{!isMobile && (
+
+
+      <section className="px-2 py-32 bg-black md:px-0 overflow-x-hidden ">
         <div className="container items-center max-w-6xl px-8 mx-auto xl:px-5">
           <div className="flex flex-wrap justify-between items-center sm:-mx-3">
             <div className="w-full md:w-1/2 md:px-3">
               <div className="w-full pb-6 space-y-6 sm:max-w-md lg:max-w-lg md:space-y-4 lg:space-y-8 xl:space-y-9 sm:pr-5 lg:pr-0 md:pb-0">
-                <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl">
+                <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
                   <TypeAnimation
                     sequence={[
                       "",
@@ -87,9 +176,7 @@ const LandingPage = () => {
                       20,
                       "Transforming Grids !",
                       3000,
-                      () => {
-                        
-                      },
+                      () => {},
                     ]}
                     wrapper="span"
                     cursor={true}
@@ -121,19 +208,79 @@ const LandingPage = () => {
                 </p>
                 <div className="relative flex flex-col sm:flex-row sm:space-x-4">
                   <ConnectButton />
-                    
                 </div>
               </div>
             </div>
-            <div className="w-full md:w-1/3 flex flex-end">
+            {!isTablet && (
+              <div className="w-full md:w-1/3 flex flex-end">
               <div className="w-full  h-auto overflow-hidden rounded-sm">
                 <FaSuperpowers color="#00C5CD" size={400} />
               </div>
             </div>
+            ) }
+            
           </div>
         </div>
       </section>
 
+ )}
+
+
+{isMobile && (
+  <section className="px-2 py-32 bg-black md:px-0 overflow-x-hidden ">
+        <div className="container items-center max-w-6xl px-4 ">
+          <div className="flex flex-wrap justify-between items-center sm:-mx-3">
+            <div className="w-full  md:px-3">
+              <div className="w-full pb-6 space-y-6 sm:max-w-md lg:max-w-lg md:space-y-4 lg:space-y-8 xl:space-y-9 sm:pr-5">
+                <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+                  <TypeAnimation
+                    sequence={[
+                      "",
+                      10,
+                      "",
+                      20,
+                      "Transforming Grids !",
+                      3000,
+                      () => {},
+                    ]}
+                    wrapper="span"
+                    cursor={true}
+                    repeat={Infinity}
+                    className="block text-yellow-400"
+                  />
+
+                  <TypeAnimation
+                    sequence={[
+                      "Transforming",
+                      1000,
+                      "Transforming Lives !",
+                      2000,
+                      "Transforming",
+                      () => {
+                        console.log("Sequence completed");
+                      },
+                    ]}
+                    wrapper="span"
+                    cursor={true}
+                    repeat={Infinity}
+                    className="block text-indigo-600"
+                  />
+                </h1>
+                <p className="mx-auto text-base text-white sm:max-w-md lg:text-3xl md:max-w-3xl">
+                  The <span className="font-bold text-blue-700">Eco-GRiD </span>
+                  platform enables efficient energy source management through
+                  its energy trading marketplace.
+                </p>
+                <div className="relative flex flex-col sm:flex-row sm:space-x-4">
+                  <ConnectButton />
+                </div>
+              </div>
+            </div>
+      
+          </div>
+        </div>
+      </section>
+)}
       <section className="w-full bg-black" id="features">
         <div className="box-border flex flex-col items-center content-center  mx-auto leading-6 text-black  md:flex-row max-w-7xl mb-10">
           <div className="box-border relative w-full max-w-md mt-5 mb-4  text-center bg-no-repeat bg-contain border-solid md:ml-0 md:mt-0 md:max-w-none lg:mb-0 md:w-1/2 xl:pl-10">
@@ -145,46 +292,105 @@ const LandingPage = () => {
             />
           </div>
 
-          <div className="box-border order-first w-full text-black border-solid md:w-1/2 md:pl-10 md:order-none mt-8">
-            <h2 className="m-0 text-xl font-semibold leading-tight border-0 border-gray-300 lg:text-3xl md:text-2xl">
-              Boost Productivity
-            </h2>
-            <p className="pt-4 pb-8 m-0 leading-7 text-white border-0 border-gray-300 sm:pr-12 xl:pr-32 lg:text-lg">
-              Achieving complete decentralization, P2P trading, transparency,
-              and optimal energy use fosters sustainability and self-reliance in
-              our energy system.
-            </p>
-            <ul className="p-0 m-0 leading-6 border-0 border-gray-300">
-              <li className="box-border relative py-1 pl-0 text-left text-white border-solid">
-                <span className="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-green-500 rounded-full">
-                  <span className="text-sm font-bold">✓</span>
-                </span>{" "}
-                Complete Decentralization: Energy grid without central control.
-              </li>
-              <li className="box-border relative py-1 pl-0 text-left text-white border-solid">
-                <span className="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-green-500 rounded-full">
-                  <span className="text-sm font-bold">✓</span>
-                </span>{" "}
-                Peer-to-Peer Energy Trading: Direct energy exchange between Sub
-                Grid.
-              </li>
-              <li className="box-border relative py-1 pl-0 text-left text-white border-solid">
-                <span className="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-green-500 rounded-full">
-                  <span className="text-sm font-bold">✓</span>
-                </span>{" "}
-                Transparency and Accountability: Open, traceable energy
-                transactions.
-              </li>
-              <li className="box-border relative py-1 pl-0 text-left text-white border-solid">
-                <span className="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-green-500 rounded-full">
-                  <span className="text-sm font-bold">✓</span>
-                </span>{" "}
-                Optimal energy use and Sustainable, self-reliant energy system.
-              </li>
-            </ul>
-          </div>
+
+          {!isMobile && (
+            <div className="ml-5 mr-5 box-border order-first w-full text-black border-solid  mt-8">
+              <h2 className="m-0 text-xl font-semibold leading-tight border-0 border-gray-300 lg:text-3xl md:text-2xl">
+                Boost Productivity
+              </h2>
+              <p className="pt-4 pb-8 m-0 leading-7 text-white border-0 border-gray-300 sm:pr-12 xl:pr-32 lg:text-lg">
+                Achieving complete decentralization, P2P trading, transparency,
+                and optimal energy use fosters sustainability and self-reliance
+                in our energy system.
+              </p>
+              <ul className="p-0 m-0 leading-6 border-0 border-gray-300">
+                <li className="box-border relative py-1 pl-0 text-left text-white border-solid">
+                  <span className="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-green-500 rounded-full">
+                    <span className="text-sm font-bold">✓</span>
+                  </span>{" "}
+                  Complete Decentralization: Energy grid without central
+                  control.
+                </li>
+                <li className="box-border relative py-1 pl-0 text-left text-white border-solid">
+                  <span className="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-green-500 rounded-full">
+                    <span className="text-sm font-bold">✓</span>
+                  </span>{" "}
+                  Peer-to-Peer Energy Trading: Direct energy exchange between
+                  Sub Grid.
+                </li>
+                <li className="box-border relative py-1 pl-0 text-left text-white border-solid">
+                  <span className="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-green-500 rounded-full">
+                    <span className="text-sm font-bold">✓</span>
+                  </span>{" "}
+                  Transparency and Accountability: Open, traceable energy
+                  transactions.
+                </li>
+                <li className="box-border relative py-1 pl-0 text-left text-white border-solid">
+                  <span className="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-green-500 rounded-full">
+                    <span className="text-sm font-bold">✓</span>
+                  </span>{" "}
+                  Optimal energy use and Sustainable, self-reliant energy
+                  system.
+                </li>
+              </ul>
+            </div>
+          )}
+
+          {isMobile && (
+            <div className=" ml-5 box-border order-first w-full  text-black border-solid md:w-1/2 md:pl-10 md:order-none mt-8">
+              <h2 className="m-0 text-xl font-semibold leading-tight border-0 border-gray-300 lg:text-3xl md:text-2xl">
+                Boost Productivity
+              </h2>
+              <p className=" pt-4 pb-8 m-0 leading-7 text-white border-0 border-gray-300 pr-5">
+                Achieving complete decentralization, P2P trading, transparency,
+                and optimal energy use fosters sustainability and self-reliance
+                in our energy system.
+              </p>
+              <ul className="p-0 m-0 leading-6 border-0 border-gray-300 pr-5">
+                <li className="box-border relative py-1 pl-0 text-left text-white border-solid flex">
+                  <span className="inline-flex items-center justify-center w-7 h-6 mr-2 text-white bg-green-500 rounded-full">
+                    <span className="text-sm font-bold">✓</span>
+                  </span>{" "}
+                  <div>
+                    Complete Decentralization: Energy grid without central
+                    control.
+                  </div>
+                </li>
+                <li className="box-border relative py-1 pl-0 text-left text-white border-solid flex">
+                  <span className="inline-flex items-center justify-center w-7 h-6 mr-2 text-white bg-green-500 rounded-full">
+                    <span className="text-sm font-bold">✓</span>
+                  </span>{" "}
+                  <div>
+                    Peer-to-Peer Energy Trading: Direct energy exchange between
+                    Sub Grid.
+                  </div>
+                </li>
+                <li className="box-border relative py-1 pl-0 text-left text-white border-solid flex">
+                  <span className="inline-flex items-center justify-center w-7 h-6 mr-2 text-white bg-green-500 rounded-full">
+                    <span className="text-sm font-bold">✓</span>
+                  </span>{" "}
+                  <div>
+                    Transparency and Accountability: Open, traceable energy
+                    transactions.
+                  </div>
+                </li>
+                <li className="box-border relative py-1 pl-0 text-left text-white border-solid flex">
+                  <span className="inline-flex items-center justify-center w-7 h-6 mr-2 text-white bg-green-500 rounded-full">
+                    <span className="text-sm font-bold">✓</span>
+                  </span>{" "}
+                  <div>
+                    Optimal energy use and Sustainable, self-reliant energy
+                    system.
+                  </div>
+                </li>
+              </ul>
+            </div>
+          )}
         </div>
 
+        
+        
+        
         <div className="box-border mb-10 flex flex-col items-center content-center px-8 mx-auto mt-5 leading-6 text-black border-0 border-gray-300 border-solid md:mt-20 xl:mt-0 md:flex-row max-w-7xl">
           <div className="box-border w-full text-black border-solid md:w-1/2 md:pl-6 ">
             <h2 className="m-0 text-xl font-semibold leading-tight border-0 border-gray-300 lg:text-3xl md:text-2xl">
@@ -200,14 +406,12 @@ const LandingPage = () => {
                   <span className="text-sm font-bold">✓</span>
                 </span>{" "}
                 Prosumer Empowerment
-
               </li>
               <li className="box-border relative py-1 pl-0 text-left text-white border-solid">
                 <span className="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-yellow-300 rounded-full">
                   <span className="text-sm font-bold">✓</span>
                 </span>{" "}
                 Real-time Monitoring
-
               </li>
               <li className="box-border relative py-1 pl-0 text-left text-white border-solid">
                 <span className="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-yellow-300 rounded-full">
@@ -228,138 +432,323 @@ const LandingPage = () => {
         </div>
       </section>
 
-      <section className="py-20  bg-black container mx-auto">
-        <div className="container items-center max-w-6xl px-8 mx-5">
-          <div className="flex flex-wrap items-center -mx-3">
-            <div className="order-1 w-full px-3 lg:w-1/2 lg:order-0">
-              <div className="w-full lg:max-w-md">
-                <h2 className="mb-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl font-heading">
-                  Decentralized Renewable Energy Trading Marketplace!
-                </h2>
-                <p className="mb-4 font-medium tracking-tight text-gray-400 xl:mb-6">
-                  
-                </p>
-                <ul>
-                  <li className="flex items-center py-2 space-x-4 xl:py-3">
-                    <svg
-                      className="w-8 h-8 text-pink-500"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
-                      ></path>
-                    </svg>
-                    <span className="font-medium text-white">
-                    Cross-Border P2P Trading: Facilitates renewable energy exchange between different nations' grids.
-
-                    </span>
-                  </li>
-                  <li className="flex items-center py-2 space-x-4 xl:py-3">
-                    <svg
-                      className="w-8 h-8 text-yellow-500"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
-                      ></path>
-                    </svg>
-                    <span className="font-medium text-white">
-                    P2G and G2P Transactions: Enables prosumers to sell excess energy to the grid and vice versa.
-
-                    </span>
-                  </li>
-                  <li className="flex items-center py-2 space-x-4 xl:py-3">
-                    <svg
-                      className="w-8 h-8 text-green-500"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                      ></path>
-                    </svg>
-                    <span className="font-medium text-white">
-                  Blockchain Trust: Utilizes blockchain for secure, transparent, and immutable transaction records.
-                    </span>
-                  </li>
-                </ul>
+      {!isMobile && (
+        <section className="py-20 bg-black container mx-auto w-full ml-5 mr-5">
+          <div className="container items-center max-w-6xl px-8 mx-5">
+            <div className="flex flex-wrap items-center -mx-3">
+              <div className="order-1 w-full px-3 lg:w-1/2 lg:order-0">
+                <div className="w-full lg:max-w-md">
+                  <h2 className="mb-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl font-heading">
+                    Decentralized Renewable Energy Trading Marketplace!
+                  </h2>
+                  <p className="mb-4 font-medium tracking-tight text-gray-400 xl:mb-6"></p>
+                  <ul>
+                    <li className="flex items-center py-2 space-x-4 xl:py-3">
+                      <svg
+                        className="w-8 h-8 text-pink-500"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
+                        ></path>
+                      </svg>
+                      <span className="font-medium text-white">
+                        Cross-Border P2P Trading: Facilitates renewable energy
+                        exchange between different nations' grids.
+                      </span>
+                    </li>
+                    <li className="flex items-center py-2 space-x-4 xl:py-3">
+                      <svg
+                        className="w-8 h-8 text-yellow-500"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+                        ></path>
+                      </svg>
+                      <span className="font-medium text-white">
+                        P2G and G2P Transactions: Enables prosumers to sell
+                        excess energy to the grid and vice versa.
+                      </span>
+                    </li>
+                    <li className="flex items-center py-2 space-x-4 xl:py-3">
+                      <svg
+                        className="w-8 h-8 text-green-500"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                        ></path>
+                      </svg>
+                      <span className="font-medium text-white">
+                        Blockchain Trust: Utilizes blockchain for secure,
+                        transparent, and immutable transaction records.
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="w-full px-3 mb-12 lg:w-1/2 order-0 lg:order-1 lg:mb-0">
+                <img
+                  className="mx-auto sm:max-w-sm lg:max-w-full"
+                  src="https://cdn.devdojo.com/images/november2020/feature-graphic.png"
+                  alt="feature image"
+                />
               </div>
             </div>
-            <div className="w-full px-3 mb-12 lg:w-1/2 order-0 lg:order-1 lg:mb-0">
+          </div>
+        </section>
+      )}
+
+      {isMobile && (
+        <section className="py-20 bg-black mr-5">
+          <div className=" items-center ">
+            <div className="flex flex-wrap items-center -mx-3">
+              <div className="order-1 w-full px-3 lg:order-0">
+                <div className="w-full lg:max-w-md ml-5">
+                  <h2 className="w-full mb-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl font-heading">
+                    Decentralized Renewable Energy Trading Marketplace!
+                  </h2>
+                  <p className="mb-4 font-medium tracking-tight text-gray-400 xl:mb-6"></p>
+
+                  <ul className="p-0 m-0 leading-6 border-0 border-gray-300">
+                    <li className="box-border relative py-1  text-left text-white border-solid flex">
+                      <div className="w-10 h-10 mt-1.5 mr-2">
+                        <svg
+                          className=" text-pink-500"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
+                          ></path>
+                        </svg>
+                      </div>
+
+                      <div>
+                        Cross-Border P2P Trading: Facilitates renewable energy
+                        exchange between different nations' grids.
+                      </div>
+                    </li>
+
+                    <li className="box-border relative py-1 pl-0 text-left text-white border-solid flex">
+                      <div className="w-10 h-10 mt-1.5 mr-2">
+                        <svg
+                          className=" text-yellow-500"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+                          ></path>
+                        </svg>
+                      </div>
+                      <div>
+                        P2G and G2P Transactions: Enables prosumers to sell
+                        excess energy to the grid and vice versa.
+                      </div>
+                    </li>
+                    <li className="box-border relative py-1 pl-0 text-left text-white border-solid flex">
+                      <div className="w-10 h-10 mt-1.5 mr-2">
+                        <svg
+                          className="text-green-500"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                          ></path>
+                        </svg>
+                      </div>
+                      <div>
+                        Blockchain Trust: Utilizes blockchain for secure,
+                        transparent, and immutable transaction records.
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="w-full px-3 mb-12 lg:w-1/2 order-0 lg:order-1 lg:mb-0">
+                <img
+                  className="mx-auto sm:max-w-sm lg:max-w-full"
+                  src="https://cdn.devdojo.com/images/november2020/feature-graphic.png"
+                  alt="feature image"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {!isTablet && (
+        <div
+          className="w-full ml-5 mr-5 section2 mx-auto bg-black flex justify-center items-center"
+          id="usecases"
+        >
+          <div className="features flex flex-wrap">
+            <div className="tile real-time">
               <img
-                className="mx-auto sm:max-w-sm lg:max-w-full"
-                src="https://cdn.devdojo.com/images/november2020/feature-graphic.png"
-                alt="feature image"
+                src="https://raw.githubusercontent.com/hammercait/fylo-dark-theme-landing-page/658fd0afb4462e6a7e94996ab981bb7d5b336997/images/icon-collaboration.svg"
+                alt="clock icon"
               />
+              <h3 className="mt-4 font-bold uppercase text-yellow-300">
+                Prosumer-to-Grid and Grid-to-Prosumer Trading (P2G and G2P)
+              </h3>
+              <p className="mt-4">
+                Allowing prosumers, such as households with solar panels etc to
+                sell excess energy generated from renewable sources (P2G) to the
+                central grid, contributing to clean energy generation.
+              </p>
+            </div>
+            <div className="tile access">
+              <FiSun size={100} color="teal" />
+              <h3 className="mt-4 font-bold text-yellow-300 uppercase">
+                One Sun One World One Grid
+              </h3>
+              <p className="mt-4">
+                Promoting The One Sun One World One Grid (OSOWOG), a
+                transnational electricity grid supplying power all over the
+                world. The idea initiated by the International Solar Alliance
+                (ISA) in 2018.
+              </p>
+            </div>
+
+            <div className="tile security">
+              <PiGitDiffLight size={100} color="teal" />
+              <h3 className="mt-4 font-bold uppercase text-yellow-300">
+                Cross-Border Energy Trading (P2P)
+              </h3>
+
+              <p className="mt-4">
+                Promoting neighboring countries with interconnected energy grids
+                to engage in cross-border energy trading.
+              </p>
+            </div>
+            <div className="tile storage">
+              <TbBusinessplan size={100} color="teal" />
+              <h3 className="mt-4 font-bold uppercase text-yellow-300">
+                Unlocking business potential
+              </h3>
+              <p className="mt-4">
+                Empowering producers to profit from one-time investments, such
+                as solar, through peer-to-peer transactions.
+              </p>
             </div>
           </div>
         </div>
-      </section>
-      <div className="section2 mx-auto bg-black flex justify-center items-center" id="usecases">
-        <div className="features flex flex-wrap">
-          
-          <div className="tile real-time">
-            <img
-              src="https://raw.githubusercontent.com/hammercait/fylo-dark-theme-landing-page/658fd0afb4462e6a7e94996ab981bb7d5b336997/images/icon-collaboration.svg"
-              alt="clock icon"
-            />
-            <h3 className="mt-4 font-bold uppercase text-yellow-300">
-            Prosumer-to-Grid and Grid-to-Prosumer Trading (P2G and G2P)
-            </h3>
-            <p className="mt-4">
-            Allowing prosumers, such as households with solar panels etc to sell excess energy generated from renewable sources (P2G) to the central grid, contributing to clean energy generation. 
-            </p>
-          </div>
-          <div className="tile access">
-            <FiSun size={100} color="teal" />
-            <h3 className="mt-4 font-bold text-yellow-300 uppercase">
-            One Sun One World One Grid
-            </h3>
-            <p className="mt-4">
-            Promoting The One Sun One World One Grid (OSOWOG), a transnational electricity grid supplying power all over the world. The idea initiated by  the International Solar Alliance (ISA) in 2018.
-            </p>
-          </div>
-          
-          <div className="tile security">
-           <PiGitDiffLight size={100} color="teal" />
-            <h3 className="mt-4 font-bold uppercase text-yellow-300">
-            Cross-Border Energy Trading (P2P)
-            </h3>
+      )}
 
-            <p className="mt-4">
-            Promoting
-neighboring countries with interconnected energy grids to engage in cross-border energy trading.
+      {isTablet && (
+        <div className=" items-center w-full ml-5 mr-5 justify-center mr-5 mt-20 mb-4 lg:flex">
 
-            </p>
+          <div className="flex flex-col mb-10 items-start justify-start w-full h-auto mb-12 lg:w-1/3 lg:mb-0">
+            <div className="flex items-center justify-center">
+              <div className="w-16 h-16 mr-3 overflow-hidden ">
+                <img
+                  src="https://raw.githubusercontent.com/hammercait/fylo-dark-theme-landing-page/658fd0afb4462e6a7e94996ab981bb7d5b336997/images/icon-collaboration.svg"
+                  alt="clock icon"
+                />
+              </div>
+              <div className="flex flex-col items-start justify-center">
+                <h4 className="font-bold text-yellow-300">
+                  Prosumer-to-Grid and Grid-to-Prosumer Trading (P2G and G2P)
+                </h4>
+              </div>
+            </div>
+            <blockquote className="mt-8 text-lg text-white">
+              Allowing prosumers, such as households with solar panels etc to
+              sell excess energy generated from renewable sources (P2G) to the
+              central grid, contributing to clean energy generation.
+            </blockquote>
           </div>
-          <div className="tile storage">
-            <TbBusinessplan size={100} color="teal" />
-            <h3 className="mt-4 font-bold uppercase text-yellow-300">
-            Unlocking business potential
-            </h3>
-            <p className="mt-4">
-         Empowering producers to profit from one-time investments, such as solar, through peer-to-peer transactions.
-            </p>
+
+          <div className="flex flex-col mb-10 items-start justify-start w-full h-auto px-0 mx-0 mb-12 border-l border-r border-transparent lg:w-1/3 lg:mb-0 lg:px-8 lg:mx-8 lg:border-gray-200">
+            <div className="flex items-center justify-center">
+              <div className=" mr-3 overflow-hidden ">
+                <FiSun size={50} color="teal" />
+              </div>
+              <div className="flex flex-col items-start justify-center">
+                <h4 className="font-bold text-yellow-300">
+                  One Sun One World One Grid
+                </h4>
+              </div>
+            </div>
+            <blockquote className="mt-8 text-lg text-white">
+              Promoting The One Sun One World One Grid (OSOWOG), a transnational
+              electricity grid supplying power all over the world. The idea
+              initiated by the International Solar Alliance (ISA) in 2018.
+            </blockquote>
+          </div>
+
+          <div className="flex flex-col mb-10  items-start justify-start w-full h-auto lg:w-1/3">
+            <div className="flex items-center justify-center">
+              <div className=" mr-3">
+                <PiGitDiffLight size={50} color="teal" />
+              </div>
+              <div className="flex flex-col items-start justify-center">
+                <h4 className="font-bold text-yellow-300">
+                  Cross-Border Energy Trading (P2P)
+                </h4>
+              </div>
+            </div>
+            <blockquote className="mt-8 text-lg text-white">
+              Promoting neighboring countries with interconnected energy grids
+              to engage in cross-border energy trading.
+            </blockquote>
+          </div>
+
+          <div className="flex flex-col items-start justify-start w-full h-auto lg:w-1/3">
+            <div className="flex items-center justify-center">
+              <div className=" mr-3 ">
+              <TbBusinessplan size={50} color="teal" />
+              </div>
+              <div className="flex flex-col items-start justify-center">
+                <h4 className="font-bold text-yellow-300">
+                Unlocking business potential
+                </h4>
+              </div>
+            </div>
+            <blockquote className="mt-8 text-lg text-white">
+            Empowering producers to profit from one-time investments, such
+                as solar, through peer-to-peer transactions.
+            </blockquote>
           </div>
         </div>
-      </div>
+      )}
+
       <section className="flex items-center justify-center py-20 bg-black min-w-screen">
         <div className="px-16 bg-black">
           <div className="container flex flex-col items-start mx-auto lg:items-center">
