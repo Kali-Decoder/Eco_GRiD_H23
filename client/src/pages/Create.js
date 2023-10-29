@@ -3,8 +3,6 @@ import Header from "../components/Header";
 
 
 const Create = () => {
-  
-
  
   return (
     <>

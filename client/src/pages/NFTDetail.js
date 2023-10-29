@@ -10,15 +10,15 @@ import { useARStatus } from "../hooks/isARStatus";
 const NFTDetail = () => {
   const [colors, setColors] = useState([]);
 
-  const [isLike, setIsLike] = useState(false);
 
-  const like = () => setIsLike(!isLike);
+
+
 
   const getColors = (colors) => {
     setColors((c) => [...c, ...colors]);
   };
 
-  const navigate = useNavigate();
+
 
   return (
     <div>
